@@ -1,0 +1,494 @@
+{
+    "brA_branch": {
+        "name": "Branch A Branch",
+        "type": "branch",
+        "assignable": false,
+        "parent": ""
+    },
+    "brA_hallway_1": {
+        "name": "Branch A Hallway 1",
+        "type": "hallway",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_door_1": {
+        "name": "Branch A Front Door",
+        "type": "door",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_hallway_2": {
+        "name": "Branch A Hallway 2",
+        "type": "hallway",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_room_it": {
+        "name": "Branch A IT/Compliance/Cards Room",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_office_100": {
+        "name": "Branch A Office 100",
+        "type": "office",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_100": {
+        "name": "Branch A Cubicle 100",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_101": {
+        "name": "Branch A Cubicle 101",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_102": {
+        "name": "Branch A Cubicle 102",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_103": {
+        "name": "Branch A Cubicle 103",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_104": {
+        "name": "Branch A Cubicle 104",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_105": {
+        "name": "Branch A Cubicle 105",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_106": {
+        "name": "Branch A Cubicle 106",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_107": {
+        "name": "Branch A Cubicle 107",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_108": {
+        "name": "Branch A Cubicle 108",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_109": {
+        "name": "Branch A Cubicle 109",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_110": {
+        "name": "Branch A Cubicle 110",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_cubicle_111": {
+        "name": "Branch A Cubicle 111",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_room_lending_center": {
+        "name": "Branch A Lending Center",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_cubicle_112": {
+        "name": "Branch A Cubicle 112",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lending_center"
+    },
+    "brA_cubicle_113": {
+        "name": "Branch A Cubicle 113",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_114": {
+        "name": "Branch A Cubicle 114",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_115": {
+        "name": "Branch A Cubicle 115",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_116": {
+        "name": "Branch A Cubicle 116",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_117": {
+        "name": "Branch A Cubicle 117",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_118": {
+        "name": "Branch A Cubicle 118",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_119": {
+        "name": "Branch A Cubicle 119",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_120": {
+        "name": "Branch A Cubicle 120",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_121": {
+        "name": "Branch A Cubicle 121",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_122": {
+        "name": "Branch A Cubicle 122",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_123": {
+        "name": "Branch A Cubicle 123",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_124": {
+        "name": "Branch A Cubicle 124",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_125": {
+        "name": "Branch A Cubicle 125",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_126": {
+        "name": "Branch A Cubicle 126",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_127": {
+        "name": "Branch A Cubicle 127",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_128": {
+        "name": "Branch A Cubicle 127",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_cubicle_129": {
+        "name": "Branch A Cubicle 129",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_office_101": {
+        "name": "Branch A Office 101",
+        "type": "office",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_datacenter": {
+        "name": "Branch A Datacenter",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_cubicle_154": {
+        "name": "Branch A Cubicle 154",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_datacenter"
+    },
+    "brA_closet_supply": {
+        "name": "Branch A Supply Closet",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_restroom_men": {
+        "name": "Branch A Men's Restroom",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_restroom_women": {
+        "name": "Branch A Women's Restroom",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_breakroom": {
+        "name": "Branch A Breakroom",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_cubicle_155": {
+        "name": "Branch A Cubicle 155",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_breakroom"
+    },
+    "brA_callcenter": {
+        "name": "Branch A Call Center",
+        "type": "room",
+        "assignable": false,
+        "parent": "brA_branch"
+    },
+    "brA_office_102": {
+        "name": "Branch A Office 102",
+        "type": "office",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_room_conference": {
+        "name": "Branch A Conference Room",
+        "type": "room",
+        "assignable": true,
+        "parent": "brA_branch"
+    },
+    "brA_cubicle_130": {
+        "name": "Branch A Cubicle 130",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_131": {
+        "name": "Branch A Cubicle 131",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_132": {
+        "name": "Branch A Cubicle 132",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_133": {
+        "name": "Branch A Cubicle 133",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_134": {
+        "name": "Branch A Cubicle 134",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_135": {
+        "name": "Branch A Cubicle 135",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_136": {
+        "name": "Branch A Cubicle 136",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_137": {
+        "name": "Branch A Cubicle 137",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_138": {
+        "name": "Branch A Cubicle 138",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_139": {
+        "name": "Branch A Cubicle 139",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_140": {
+        "name": "Branch A Cubicle 140",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_141": {
+        "name": "Branch A Cubicle 141",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_142": {
+        "name": "Branch A Cubicle 142",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_143": {
+        "name": "Branch A Cubicle 143",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_144": {
+        "name": "Branch A Cubicle 144",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter",
+        "generator": true
+    },
+    "brA_cubicle_145": {
+        "name": "Branch A Cubicle 145",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_146": {
+        "name": "Branch A Cubicle 146",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_147": {
+        "name": "Branch A Cubicle 147",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_148": {
+        "name": "Branch A Cubicle 148",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_149": {
+        "name": "Branch A Cubicle 148",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_150": {
+        "name": "Branch A Cubicle 150",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_151": {
+        "name": "Branch A Cubicle 151",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_152": {
+        "name": "Branch A Cubicle 152",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_cubicle_153": {
+        "name": "Branch A Cubicle 153",
+        "type": "cubicle",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_counter_1": {
+        "name": "Branch A Counter 1",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_counter_2": {
+        "name": "Branch A Counter 2",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_counter_3": {
+        "name": "Branch A Counter 3",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_room_it"
+    },
+    "brA_counter_4": {
+        "name": "Branch A Counter 4",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_counter_5": {
+        "name": "Branch A Counter 5",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_counter_6": {
+        "name": "Branch A Counter6",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_counter_7": {
+        "name": "Branch A Counter 7",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_callcenter"
+    },
+    "brA_counter_8": {
+        "name": "Branch A Counter 8",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    },
+    "brA_counter_9": {
+        "name": "Branch A Counter 9",
+        "type": "counter",
+        "assignable": true,
+        "parent": "brA_room_lendingcenter"
+    }
+}

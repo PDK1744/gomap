@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="WCuPH3kfzQQOXPRSfe8U">
+    <mxGraphModel dx="5147" dy="1660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" style="locked=0;" value="Branch" />
+        <object label="" tru_id="brA_branch" id="087wRRmpE_3PW_zys4pw-2">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="1480" width="2550" x="-1520" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_hallway_1" id="087wRRmpE_3PW_zys4pw-4">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;direction=south;strokeColor=light-dark(#000000,#FF2323);" vertex="1">
+            <mxGeometry height="940" width="60" x="510" y="690" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_hallway_2" id="087wRRmpE_3PW_zys4pw-5">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#FF2323);" vertex="1">
+            <mxGeometry height="60" width="1890" x="-1520" y="710" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_room_it" id="087wRRmpE_3PW_zys4pw-7">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="920" width="660" x="370" y="710" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_office_100" id="087wRRmpE_3PW_zys4pw-8">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="170" width="660" x="370" y="710" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_100" id="087wRRmpE_3PW_zys4pw-9">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="1020" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_101" id="087wRRmpE_3PW_zys4pw-10">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="1020" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_102" id="087wRRmpE_3PW_zys4pw-11">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="610" y="1020" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_105" id="087wRRmpE_3PW_zys4pw-12">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="610" y="1130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_104" id="087wRRmpE_3PW_zys4pw-13">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="1130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_103" id="087wRRmpE_3PW_zys4pw-14">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="1130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_106" id="087wRRmpE_3PW_zys4pw-16">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="1310" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_107" id="087wRRmpE_3PW_zys4pw-17">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="1310" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_108" id="087wRRmpE_3PW_zys4pw-18">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="610" y="1310" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_109" id="087wRRmpE_3PW_zys4pw-19">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="1420" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_110" id="087wRRmpE_3PW_zys4pw-20">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="1420" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_111" id="087wRRmpE_3PW_zys4pw-21">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="610" y="1420" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_room_lending_center" id="087wRRmpE_3PW_zys4pw-23">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="560" width="1200" x="-170" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_112" id="087wRRmpE_3PW_zys4pw-24">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_113" id="087wRRmpE_3PW_zys4pw-25">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_114" id="087wRRmpE_3PW_zys4pw-27">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="890" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_115" id="087wRRmpE_3PW_zys4pw-28">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_116" id="087wRRmpE_3PW_zys4pw-29">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_117" id="087wRRmpE_3PW_zys4pw-30">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="750" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_118" id="087wRRmpE_3PW_zys4pw-31">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="460" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_119" id="087wRRmpE_3PW_zys4pw-32">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="460" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_120" id="087wRRmpE_3PW_zys4pw-33">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="460" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_121" id="087wRRmpE_3PW_zys4pw-34">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="320" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_122" id="087wRRmpE_3PW_zys4pw-35">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="320" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_123" id="087wRRmpE_3PW_zys4pw-36">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="320" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_124" id="087wRRmpE_3PW_zys4pw-37">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="40" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_125" id="087wRRmpE_3PW_zys4pw-38">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="40" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_126" id="087wRRmpE_3PW_zys4pw-39">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="40" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_127" id="087wRRmpE_3PW_zys4pw-40">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_128" id="087wRRmpE_3PW_zys4pw-41">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="260" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_129" id="087wRRmpE_3PW_zys4pw-42">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="370" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_office_101" id="087wRRmpE_3PW_zys4pw-43">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="600" x="430" y="600" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_datacenter" id="087wRRmpE_3PW_zys4pw-44">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="290" width="350" x="-520" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_closet_supply" id="087wRRmpE_3PW_zys4pw-45">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="270" width="350" x="-520" y="440" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_restroom_men" id="087wRRmpE_3PW_zys4pw-46">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="560" width="290" x="-810" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_restroom_women" id="087wRRmpE_3PW_zys4pw-47">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="560" width="290" x="-1100" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_breakroom" id="087wRRmpE_3PW_zys4pw-48">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="560" width="420" x="-1520" y="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_callcenter" id="087wRRmpE_3PW_zys4pw-49">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="860" width="1830" x="-1520" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_office_102" id="087wRRmpE_3PW_zys4pw-50">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="290" width="200" x="110" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_room_conference" id="087wRRmpE_3PW_zys4pw-51">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="570" width="200" x="110" y="1060" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_130" id="087wRRmpE_3PW_zys4pw-53">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_131" id="087wRRmpE_3PW_zys4pw-54">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_132" id="087wRRmpE_3PW_zys4pw-55">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-100" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_133" id="087wRRmpE_3PW_zys4pw-56">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-240" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_134" id="087wRRmpE_3PW_zys4pw-57">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-240" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_135" id="087wRRmpE_3PW_zys4pw-58">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-240" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_136" id="087wRRmpE_3PW_zys4pw-59">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-480" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_137" id="087wRRmpE_3PW_zys4pw-60">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-480" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_138" id="087wRRmpE_3PW_zys4pw-61">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-480" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_140" id="087wRRmpE_3PW_zys4pw-63">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-620" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_139" id="087wRRmpE_3PW_zys4pw-64">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-620" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_141" id="087wRRmpE_3PW_zys4pw-65">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-620" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_142" id="087wRRmpE_3PW_zys4pw-66">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-860" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_143" id="087wRRmpE_3PW_zys4pw-67">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-860" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_144" id="087wRRmpE_3PW_zys4pw-68">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-860" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_147" id="087wRRmpE_3PW_zys4pw-69">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1000" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_146" id="087wRRmpE_3PW_zys4pw-70">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1000" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_145" id="087wRRmpE_3PW_zys4pw-71">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1000" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_148" id="087wRRmpE_3PW_zys4pw-72">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1240" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_149" id="087wRRmpE_3PW_zys4pw-73">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1240" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_150" id="087wRRmpE_3PW_zys4pw-74">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1240" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_151" id="087wRRmpE_3PW_zys4pw-75">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1380" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_152" id="087wRRmpE_3PW_zys4pw-76">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1380" y="1410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_153" id="087wRRmpE_3PW_zys4pw-77">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-1380" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_154" id="087wRRmpE_3PW_zys4pw-78">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="120" x="-290" y="340" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_1" id="087wRRmpE_3PW_zys4pw-442">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="490" y="880" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_2" id="087wRRmpE_3PW_zys4pw-443">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="370" y="1130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_3" id="087wRRmpE_3PW_zys4pw-444">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="440" y="1520" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_4" id="087wRRmpE_3PW_zys4pw-445">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-480" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_5" id="087wRRmpE_3PW_zys4pw-446">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-645" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_6" id="087wRRmpE_3PW_zys4pw-447">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-810" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_8" id="087wRRmpE_3PW_zys4pw-448">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" y="600" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_7" id="087wRRmpE_3PW_zys4pw-449">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="110" width="140" x="-980" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_cubicle_155" id="087wRRmpE_3PW_zys4pw-450">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="100" width="120" x="-1520" y="610" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_hallway_1" id="03aemGnquQn0WrgSq3Mx-1">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#FF2323);direction=south;" vertex="1">
+            <mxGeometry height="860" width="60" x="310" y="770" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" tru_id="brA_counter_9" id="03aemGnquQn0WrgSq3Mx-2">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="90" width="140" x="690" y="510" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
