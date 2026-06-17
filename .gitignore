@@ -1,0 +1,10 @@
+# Personal notes
+WHEREILEFTOFF.txt
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
