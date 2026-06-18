@@ -29,7 +29,7 @@ type Asset struct {
 }
 
 func (a *AssetStore) GetAssetsByBranch(ctx context.Context, branchName string) ([]Asset, error) {
-	branchIDQuery := "SELECT branch_id FROM branch_alias WHERE name ILIKE $1"
+	branchIDQuery := "SELECT branch_id FROM branch_aliases WHERE alias ILIKE $1"
 	var branchID string
 	err := a.db.QueryRow(ctx, branchIDQuery, branchName).Scan(&branchID)
 
