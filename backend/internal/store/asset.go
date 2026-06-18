@@ -23,9 +23,7 @@ type Asset struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
 	Type     string `json:"type"`
-	Branch   string `json:"branch"`
 	BranchID string `json:"branch_id"`
-	Status   bool   `json:"status"`
 }
 
 func (a *AssetStore) GetAssetsByBranch(ctx context.Context, branchName string) ([]Asset, error) {
