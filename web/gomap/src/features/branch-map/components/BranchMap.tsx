@@ -13,18 +13,19 @@ import { AssetList } from "./AssetList";
 
 interface BranchMapProps {
   branch: Branch;
+  assets: Asset[];
 }
 
 const PADDING = 80; // world-unit margin around the layout when fitting to view
 const DETAIL_MIN_PX = 120; // on-screen cell width at which asset content appears
 const NO_ASSETS: Asset[] = [];
 
-export function BranchMap({ branch }: BranchMapProps) {
+export function BranchMap({ branch, assets }: BranchMapProps) {
   const { ref, size } = useElementSize<HTMLDivElement>();
   const [selected, setSelected] = useState<BranchElement | null>(null);
   const [showRoomNames, setShowRoomNames] = useState(true);
   const { assetsByElement, available, assign, unassign } =
-    useAssetAssignments();
+    useAssetAssignments(assets);
 
   const bounds = useMemo(
     () => computeBounds(branch.elements),

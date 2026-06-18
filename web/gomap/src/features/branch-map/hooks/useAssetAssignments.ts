@@ -1,20 +1,18 @@
 import { useCallback, useMemo, useState } from "react";
 import type { Asset, Assignments } from "../types";
-import { DUMMY_ASSETS, INITIAL_ASSIGNMENTS } from "../data/assets";
 
 /**
  * Holds the asset pool and which space each asset is assigned to. An asset can
  * live in at most one space, so assigning it elsewhere moves it.
  */
-export function useAssetAssignments() {
-  const [assignments, setAssignments] =
-    useState<Assignments>(INITIAL_ASSIGNMENTS);
+export function useAssetAssignments(allAssets: Asset[]) {
+  const [assignments, setAssignments] = useState<Assignments>({});
 
   const byId = useMemo(() => {
     const map = new Map<string, Asset>();
-    for (const asset of DUMMY_ASSETS) map.set(asset.id, asset);
+    for (const asset of allAssets) map.set(asset.id, asset);
     return map;
-  }, []);
+  }, [allAssets]);
 
   // tru_id -> resolved Asset[]; stable per element unless its list changes.
   const assetsByElement = useMemo(() => {
@@ -33,8 +31,8 @@ export function useAssetAssignments() {
   );
 
   const available = useMemo(
-    () => DUMMY_ASSETS.filter((a) => !assignedIds.has(a.id)),
-    [assignedIds],
+    () => allAssets.filter((a) => !assignedIds.has(a.id)),
+    [allAssets, assignedIds],
   );
 
   const assign = useCallback((elementId: string, assetId: string) => {

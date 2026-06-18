@@ -1,4 +1,5 @@
 import { useBranch } from "../hooks/useBranch";
+import { useAssets } from "../hooks/useAssets";
 import { BranchMap } from "./BranchMap";
 
 interface BranchMapViewProps {
@@ -7,9 +8,10 @@ interface BranchMapViewProps {
 
 /** Loads a branch and renders the map, with loading/error fallbacks. */
 export function BranchMapView({ branchName }: BranchMapViewProps) {
-  const { branch, loading, error } = useBranch(branchName);
+  const { branch, loading: branchLoading, error: branchError } = useBranch(branchName);
+  const { assets, loading: assetsLoading, error: assetsError } = useAssets(branchName);
 
-  if (loading) {
+  if (branchLoading || assetsLoading) {
     return (
       <Centered>
         <div className="flex items-center gap-3 text-slate-500">
@@ -20,14 +22,14 @@ export function BranchMapView({ branchName }: BranchMapViewProps) {
     );
   }
 
-  if (error || !branch) {
+  if (branchError || assetsError || !branch) {
     return (
       <Centered>
         <div className="max-w-md text-center">
           <p className="text-lg font-semibold text-slate-800">
             Couldn’t load this branch
           </p>
-          <p className="mt-1 text-sm text-slate-500">{error}</p>
+          <p className="mt-1 text-sm text-slate-500">{branchError ?? assetsError}</p>
           <p className="mt-3 text-xs text-slate-400">
             Make sure the backend is running at http://localhost:8080.
           </p>
@@ -36,7 +38,7 @@ export function BranchMapView({ branchName }: BranchMapViewProps) {
     );
   }
 
-  return <BranchMap branch={branch} />;
+  return <BranchMap branch={branch} assets={assets} />;
 }
 
 function Centered({ children }: { children: React.ReactNode }) {
