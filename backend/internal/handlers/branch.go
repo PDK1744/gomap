@@ -64,7 +64,7 @@ func (h *Handler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (h *Handler) GetAssetRoomAssingments(w http.ResponseWriter, r *http.Request) {
+func (h *Handler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 	// TODO: Centralize Logs
 	fmt.Println("GET ASSETS Assignments Request Received")
 	branchName := r.PathValue("branch_name")
@@ -87,5 +87,9 @@ func (h *Handler) GetAssetRoomAssingments(w http.ResponseWriter, r *http.Request
 		log.Fatalf("ENCODING FAILURE: %v", err)
 		return
 	}
+
+}
+
+func (h *Handler) PutAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 
 }
