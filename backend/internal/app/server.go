@@ -58,9 +58,8 @@ func New() (*App, error) {
 
 	mux.HandleFunc("GET /api/branches/{branch_name}/layout", branchHandler.GetBranchLayout)
 	mux.HandleFunc("GET /api/branches/{branch_name}/assets", branchHandler.GetAssetsByBranch)
-	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", branchHandler.GetAssetRoomAssingments)
+	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", branchHandler.GetAssetRoomAssingments) //load saved assignments on page open
 
-	// 	GET    /api/branches/{branch_name}/assignments        # load saved assignments on page open
 	// PUT    /api/branches/{branch_name}/assignments        # debounced sync (replace full state)
 	// DELETE /api/branches/{branch_name}/assignments/{room_id}  # unassign a specific room (optional)
 

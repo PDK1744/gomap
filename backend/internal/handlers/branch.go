@@ -76,7 +76,7 @@ func (h *Handler) GetAssetRoomAssingments(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	assingments := make(map[string][]string)
+	assingments := make(map[string][]string, len(assign))
 	for _, a := range assign {
 		assingments[a.RoomID] = append(assingments[a.RoomID], a.AssetID)
 	}

@@ -90,6 +90,12 @@ func (a *AssetStore) GetRoomAssignments(ctx context.Context, branchName string) 
 
 }
 
+// Should this accept a map?
+// PUT will be debounced on the frontend, but my plan is to send the full state of assingments with each request
+func (a *AssetStore) PutRoomAssignments(ctx context.Context, branchName string, assignments map[string][]string) error {
+	return nil
+}
+
 func (a *AssetStore) fetchBranchIdByName(ctx context.Context, branchName string) (string, error) {
 	branchIDQuery := "SELECT branch_id FROM branch_aliases WHERE alias ILIKE $1"
 	var branchID string
