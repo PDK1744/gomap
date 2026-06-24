@@ -43,13 +43,20 @@ CREATE UNIQUE INDEX ux_branch_aliases_alias
 ON branch_aliases (LOWER(alias));
 
 CREATE TABLE object_assets (
-    object_tru_id TEXT NOT NULL
-        REFERENCES object_metadata(tru_id),
+    room_id  TEXT NOT NULL,
+    asset_id INTEGER NOT NULL,
+    branch_id TEXT not null, 
 
-    asset_id TEXT NOT NULL
-        REFERENCES assets(asset_id),
+    CONSTRAINT fk_object_assets_room
+        FOREIGN KEY (room_id)
+        REFERENCES object_metadata (tru_id)
+        ON DELETE CASCADE,
 
-    assigned_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_object_assets_asset
+        FOREIGN KEY (asset_id)
+        REFERENCES assets (asset_id)
+        ON DELETE CASCADE,
 
-    PRIMARY KEY (object_tru_id, asset_id)
+    CONSTRAINT uq_object_assets_asset
+        UNIQUE (asset_id)
 );

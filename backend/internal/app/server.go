@@ -58,6 +58,11 @@ func New() (*App, error) {
 
 	mux.HandleFunc("GET /api/branches/{branch_name}/layout", branchHandler.GetBranchLayout)
 	mux.HandleFunc("GET /api/branches/{branch_name}/assets", branchHandler.GetAssetsByBranch)
+	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", branchHandler.GetAssetRoomAssingments)
+
+	// 	GET    /api/branches/{branch_name}/assignments        # load saved assignments on page open
+	// PUT    /api/branches/{branch_name}/assignments        # debounced sync (replace full state)
+	// DELETE /api/branches/{branch_name}/assignments/{room_id}  # unassign a specific room (optional)
 
 	app.HttpServer = &http.Server{
 		Addr:         ":" + apiCfg.Addr,
@@ -78,7 +83,7 @@ func (a *App) Close() {
 func enableCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:5173") // or "*" for local labs
-		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS, PUT, DELETE")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 
 		// Instantly answer preflight checks
