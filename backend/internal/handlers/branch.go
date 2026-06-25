@@ -66,9 +66,7 @@ func (h *Handler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 	// TODO: Centralize Logs
-	fmt.Println("GET ASSETS Assignments Request Received")
 	branchName := r.PathValue("branch_name")
-	fmt.Println("CALLING DATABASE...")
 	assign, err := h.assetStore.GetRoomAssignments(r.Context(), branchName)
 	if err != nil {
 		log.Printf("[REQUEST ERROR]: %v", err)
@@ -91,5 +89,14 @@ func (h *Handler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request
 }
 
 func (h *Handler) PutAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
+	var assignments map[string][]string
+
+	err := json.NewDecoder(r.Body).Decode(&assignments)
+	if err != nil {
+		http.Error(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+
+	// TODO: call PutRoomAssignments
 
 }
