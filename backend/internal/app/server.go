@@ -10,7 +10,7 @@ import (
 	"github.com/PDK1744/gomap/internal/handlers"
 	"github.com/PDK1744/gomap/internal/storage"
 	"github.com/PDK1744/gomap/internal/store"
-	service "github.com/PDK1744/gomap/internal/worker"
+	"github.com/PDK1744/gomap/internal/worker"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -20,7 +20,7 @@ type App struct {
 	Assets     *store.AssetStore
 	Branches   *store.BranchStore
 
-	Sync *service.AssetSyncService
+	Sync *worker.AssetSyncService
 	// May noy need the pools in the App struct
 	// I'm passing the pool into the stores so unless I need the pools elsewhere.. I can remove from App
 	mainPool   *pgxpool.Pool
@@ -49,7 +49,7 @@ func New() (*App, error) {
 		Rooms:      store.NewRoomStore(mainPool),
 		Assets:     store.NewAssetStore(mainPool),
 		Branches:   store.NewBranchStore(mainPool),
-		Sync:       service.NewAssetSyncService(mainPool, workerPool),
+		Sync:       worker.NewAssetSyncService(mainPool, workerPool),
 		mainPool:   mainPool,
 		workerPool: workerPool,
 	}
