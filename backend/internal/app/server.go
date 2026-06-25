@@ -8,9 +8,9 @@ import (
 
 	"github.com/PDK1744/gomap/internal/config"
 	"github.com/PDK1744/gomap/internal/handlers"
-	"github.com/PDK1744/gomap/internal/service"
 	"github.com/PDK1744/gomap/internal/storage"
 	"github.com/PDK1744/gomap/internal/store"
+	service "github.com/PDK1744/gomap/internal/worker"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
