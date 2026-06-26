@@ -8,6 +8,7 @@ import (
 
 	"github.com/PDK1744/gomap/internal/config"
 	"github.com/PDK1744/gomap/internal/handlers"
+	"github.com/PDK1744/gomap/internal/service"
 	"github.com/PDK1744/gomap/internal/storage"
 	"github.com/PDK1744/gomap/internal/store"
 	"github.com/PDK1744/gomap/internal/worker"
@@ -15,16 +16,17 @@ import (
 )
 
 type App struct {
-	HttpServer *http.Server
-	Rooms      *store.RoomStore
-	Assets     *store.AssetStore
-	Branches   *store.BranchStore
+	HttpServer    *http.Server
+	branchHandler *handlers.BranchHandler
+	sync          *worker.AssetSyncService
+	mainPool      *pgxpool.Pool
+	workerPool    *pgxpool.Pool
+}
 
-	Sync *worker.AssetSyncService
-	// May noy need the pools in the App struct
-	// I'm passing the pool into the stores so unless I need the pools elsewhere.. I can remove from App
-	mainPool   *pgxpool.Pool
-	workerPool *pgxpool.Pool
+type Configs struct {
+	apiCfg    *config.APIConfig
+	dbCfg     *config.DBConfig
+	workerCfg *config.WorkerDBConfig
 }
 
 func New() (*App, error) {
@@ -32,33 +34,21 @@ func New() (*App, error) {
 	dbCfg := config.NewDBConfig()
 	workerDBCfg := config.NewWorkerDBConfig()
 
+	cfgs := &Configs{
+		apiCfg:    apiCfg,
+		dbCfg:     dbCfg,
+		workerCfg: workerDBCfg,
+	}
+
 	ctx := context.Background()
 
-	mainPool, err := storage.Connect(ctx, dbCfg.ConnStr)
-	if err != nil {
-		log.Fatalf("main db pool failure: %v", err)
-	}
+	app := loadApp(ctx, cfgs)
 
-	workerPool, err := storage.Connect(ctx, workerDBCfg.ConnStr)
-	if err != nil {
-		mainPool.Close()
-		log.Fatalf("worker db pool failure: %v", err)
-	}
-
-	app := &App{
-		Rooms:      store.NewRoomStore(mainPool),
-		Assets:     store.NewAssetStore(mainPool),
-		Branches:   store.NewBranchStore(mainPool),
-		Sync:       worker.NewAssetSyncService(mainPool, workerPool),
-		mainPool:   mainPool,
-		workerPool: workerPool,
-	}
-	branchHandler := handlers.NewBranchHandler(app.Branches, app.Assets)
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("GET /api/branches/{branch_name}/layout", branchHandler.GetBranchLayout)
-	mux.HandleFunc("GET /api/branches/{branch_name}/assets", branchHandler.GetAssetsByBranch)
-	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", branchHandler.GetAssetRoomAssignments) //load saved assignments on page open
+	mux.HandleFunc("GET /api/branches/{branch_name}/layout", app.branchHandler.GetBranchLayout)
+	mux.HandleFunc("GET /api/branches/{branch_name}/assets", app.branchHandler.GetAssetsByBranch)
+	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", app.branchHandler.GetAssetRoomAssignments) //load saved assignments on page open
 
 	// PUT    /api/branches/{branch_name}/assignments        # debounced sync (replace full state)
 	// DELETE /api/branches/{branch_name}/assignments/{room_id}  # unassign a specific room (optional)
@@ -99,7 +89,7 @@ func (a *App) StartAssetSyncWorker(ctx context.Context, interval time.Duration) 
 	ticker := time.NewTicker(interval)
 	defer ticker.Stop()
 
-	if err := a.Sync.SyncAssets(ctx); err != nil {
+	if err := a.sync.SyncAssets(ctx); err != nil {
 		log.Printf("initial sync failed: %v", err)
 	}
 
@@ -109,10 +99,41 @@ func (a *App) StartAssetSyncWorker(ctx context.Context, interval time.Duration) 
 			log.Println("asset sync worker stopping")
 			return
 		case <-ticker.C:
-			if err := a.Sync.SyncAssets(ctx); err != nil {
+			if err := a.sync.SyncAssets(ctx); err != nil {
 				log.Printf("asset sync failed: %v", err)
 			}
 		}
 
+	}
+}
+
+func loadApp(ctx context.Context, cfgs *Configs) *App {
+	mainPool, err := storage.Connect(ctx, cfgs.dbCfg.ConnStr)
+	if err != nil {
+		log.Fatalf("main db pool failure: %v", err)
+	}
+
+	workerPool, err := storage.Connect(ctx, cfgs.workerCfg.ConnStr)
+	if err != nil {
+		mainPool.Close()
+		log.Fatalf("worker db pool failure: %v", err)
+	}
+	// init App struct with services, handlers, etc.
+
+	branchStore := store.NewBranchStore(mainPool)
+	assetStore := store.NewAssetStore(mainPool)
+
+	branchService := service.NewBranchService(branchStore)
+	assetService := service.NewAssetService(assetStore)
+
+	syncWorker := worker.NewAssetSyncService(mainPool, workerPool)
+
+	branchHandler := handlers.NewHandler(branchService, assetService)
+
+	return &App{
+		branchHandler: branchHandler,
+		sync:          syncWorker,
+		mainPool:      mainPool,
+		workerPool:    workerPool,
 	}
 }

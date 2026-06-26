@@ -8,23 +8,27 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/PDK1744/gomap/internal/store"
+	"github.com/PDK1744/gomap/internal/service"
 )
 
-type Handler struct {
-	branchStore *store.BranchStore
-	assetStore  *store.AssetStore
+type BranchHandler struct {
+	branchService *service.BranchService
+	assetService  *service.AssetService
 }
 
-func NewBranchHandler(branchStore *store.BranchStore, assetStore *store.AssetStore) *Handler {
-	return &Handler{branchStore: branchStore, assetStore: assetStore}
+func NewHandler(brService *service.BranchService, asService *service.AssetService) *BranchHandler {
+	return &BranchHandler{branchService: brService, assetService: asService}
 }
 
-func (h *Handler) GetBranchLayout(w http.ResponseWriter, r *http.Request) {
+func (h *BranchHandler) GetBranchLayout(w http.ResponseWriter, r *http.Request) {
 	// TODO: Centralize Logs
 	fmt.Println("GET BRANCH Request Received")
 	branchName := r.PathValue("branch_name")
-	layout, err := h.branchStore.FetchBranchLayout(r.Context(), branchName)
+	if branchName == "" {
+		http.Error(w, "branch name is empty", http.StatusBadRequest)
+		return
+	}
+	layout, err := h.branchService.FetchBranchLayout(r.Context(), branchName)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
 			http.Error(w, "Branch map data not found", http.StatusNotFound)
@@ -42,7 +46,7 @@ func (h *Handler) GetBranchLayout(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (h *Handler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
+func (h *BranchHandler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
 	// TODO: Centralize Logs
 	fmt.Println("GET ASSETS BY BRANCH Request Received")
 	branchName := r.PathValue("branch_name")
@@ -64,7 +68,7 @@ func (h *Handler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (h *Handler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
+func (h *BranchHandler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 	// TODO: Centralize Logs
 	branchName := r.PathValue("branch_name")
 	assign, err := h.assetStore.GetRoomAssignments(r.Context(), branchName)
@@ -88,7 +92,7 @@ func (h *Handler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request
 
 }
 
-func (h *Handler) PutAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
+func (h *BranchHandler) PutAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 	var assignments map[string][]string
 
 	err := json.NewDecoder(r.Body).Decode(&assignments)

@@ -96,7 +96,7 @@ func (a *AssetStore) PutRoomAssignments(ctx context.Context, branchName string, 
 	return nil
 }
 
-func (a *AssetStore) fetchBranchIdByName(ctx context.Context, branchName string) (string, error) {
+func (a *AssetStore) FetchBranchIdByName(ctx context.Context, branchName string) (string, error) {
 	branchIDQuery := "SELECT branch_id FROM branch_aliases WHERE alias ILIKE $1"
 	var branchID string
 	err := a.db.QueryRow(ctx, branchIDQuery, branchName).Scan(&branchID)
