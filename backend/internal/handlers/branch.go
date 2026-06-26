@@ -46,51 +46,75 @@ func (h *BranchHandler) GetBranchLayout(w http.ResponseWriter, r *http.Request) 
 	}
 }
 
-func (h *BranchHandler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
-	// TODO: Centralize Logs
-	fmt.Println("GET ASSETS BY BRANCH Request Received")
+func (h *BranchHandler) GetBranchAssetsAndAssignments(w http.ResponseWriter, r *http.Request) {
 	branchName := r.PathValue("branch_name")
-	assets, err := h.assetStore.GetAssetsByBranch(r.Context(), branchName)
+	if branchName == "" {
+		http.Error(w, "branch name is empty", http.StatusBadRequest)
+		return
+	}
+
+	data, err := h.assetService.FetchBranchAssetsData(r.Context(), branchName)
 	if err != nil {
-		if errors.Is(err, os.ErrNotExist) {
-			http.Error(w, "assets not found", http.StatusNotFound)
-			return
-		}
-		log.Printf("Error with request: %v", err)
+		log.Printf("[ERROR] with request: %v", err)
 		http.Error(w, "Internal Server Error: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	if err := json.NewEncoder(w).Encode(assets); err != nil {
+	if err := json.NewEncoder(w).Encode(data); err != nil {
 		log.Fatalf("ENCODING FAILURE: %v", err)
 		return
 	}
 }
 
-func (h *BranchHandler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
-	// TODO: Centralize Logs
-	branchName := r.PathValue("branch_name")
-	assign, err := h.assetStore.GetRoomAssignments(r.Context(), branchName)
-	if err != nil {
-		log.Printf("[REQUEST ERROR]: %v", err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
+// func (h *BranchHandler) GetAssetsByBranch(w http.ResponseWriter, r *http.Request) {
+// 	// TODO: Centralize Logs
+// 	branchName := r.PathValue("branch_name")
+// 	if branchName == "" {
+// 		http.Error(w, "branch name is empty", http.StatusBadRequest)
+// 		return
+// 	}
+// 	assets, err := h.assetStore.GetAssetsByBranch(r.Context(), branchName)
+// 	if err != nil {
+// 		if errors.Is(err, os.ErrNotExist) {
+// 			http.Error(w, "assets not found", http.StatusNotFound)
+// 			return
+// 		}
+// 		log.Printf("Error with request: %v", err)
+// 		http.Error(w, "Internal Server Error: "+err.Error(), http.StatusInternalServerError)
+// 		return
+// 	}
+// 	w.Header().Set("Content-Type", "application/json")
+// 	w.WriteHeader(http.StatusOK)
+// 	if err := json.NewEncoder(w).Encode(assets); err != nil {
+// 		log.Fatalf("ENCODING FAILURE: %v", err)
+// 		return
+// 	}
+// }
 
-	assingments := make(map[string][]string, len(assign))
-	for _, a := range assign {
-		assingments[a.RoomID] = append(assingments[a.RoomID], a.AssetID)
-	}
+// func (h *BranchHandler) GetAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
+// 	// TODO: Centralize Logs
+// 	branchName := r.PathValue("branch_name")
+// 	assign, err := h.assetStore.GetRoomAssignments(r.Context(), branchName)
+// 	if err != nil {
+// 		log.Printf("[REQUEST ERROR]: %v", err)
+// 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+// 		return
+// 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	if err := json.NewEncoder(w).Encode(assingments); err != nil {
-		log.Fatalf("ENCODING FAILURE: %v", err)
-		return
-	}
+// 	assingments := make(map[string][]string, len(assign))
+// 	for _, a := range assign {
+// 		assingments[a.RoomID] = append(assingments[a.RoomID], a.AssetID)
+// 	}
 
-}
+// 	w.Header().Set("Content-Type", "application/json")
+// 	w.WriteHeader(http.StatusOK)
+// 	if err := json.NewEncoder(w).Encode(assingments); err != nil {
+// 		log.Fatalf("ENCODING FAILURE: %v", err)
+// 		return
+// 	}
+
+// }
 
 func (h *BranchHandler) PutAssetRoomAssignments(w http.ResponseWriter, r *http.Request) {
 	var assignments map[string][]string

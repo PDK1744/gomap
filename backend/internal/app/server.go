@@ -17,6 +17,7 @@ import (
 
 type App struct {
 	HttpServer    *http.Server
+	Branches      *store.BranchStore // needed for the sync worker
 	branchHandler *handlers.BranchHandler
 	sync          *worker.AssetSyncService
 	mainPool      *pgxpool.Pool
@@ -47,8 +48,9 @@ func New() (*App, error) {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /api/branches/{branch_name}/layout", app.branchHandler.GetBranchLayout)
-	mux.HandleFunc("GET /api/branches/{branch_name}/assets", app.branchHandler.GetAssetsByBranch)
-	mux.HandleFunc("GET /api/branches/{branch_name}/assignments", app.branchHandler.GetAssetRoomAssignments) //load saved assignments on page open
+	mux.HandleFunc("GET /api/branches/{branch_name}/asset/data", app.branchHandler.GetBranchAssetsAndAssignments) // will return Assets and their assignments
+	// mux.HandleFunc("GET /api/branches/{branch_name}/assets", app.branchHandler.GetAssetsByBranch)
+	// mux.HandleFunc("GET /api/branches/{branch_name}/assignments", app.branchHandler.GetAssetRoomAssignments) //load saved assignments on page open
 
 	// PUT    /api/branches/{branch_name}/assignments        # debounced sync (replace full state)
 	// DELETE /api/branches/{branch_name}/assignments/{room_id}  # unassign a specific room (optional)
@@ -131,6 +133,7 @@ func loadApp(ctx context.Context, cfgs *Configs) *App {
 	branchHandler := handlers.NewHandler(branchService, assetService)
 
 	return &App{
+		Branches:      branchStore,
 		branchHandler: branchHandler,
 		sync:          syncWorker,
 		mainPool:      mainPool,

@@ -28,17 +28,11 @@ type Asset struct {
 
 type ObjectAsset struct {
 	RoomID  string //`json:"room_id"`
-	AssetID string //`json:"asset_id"`
+	AssetID int    //`json:"asset_id"`
 	//BranchID string //`json:"branch_id,omitempty"`
 }
 
-func (a *AssetStore) GetAssetsByBranch(ctx context.Context, branchName string) ([]Asset, error) {
-
-	branchID, err := a.fetchBranchIdByName(ctx, branchName)
-	if err != nil {
-		return nil, err
-	}
-
+func (a *AssetStore) GetAssetsByBranch(ctx context.Context, branchID string) ([]Asset, error) {
 	var assets []Asset
 	assetQuery := "SELECT asset_id, name, asset_type, branch_id from assets WHERE is_active = true AND branch_id = $1"
 
@@ -60,15 +54,7 @@ func (a *AssetStore) GetAssetsByBranch(ctx context.Context, branchName string) (
 
 }
 
-func (a *AssetStore) GetRoomAssignments(ctx context.Context, branchName string) ([]ObjectAsset, error) {
-	branchID, err := a.fetchBranchIdByName(ctx, branchName)
-	if err != nil {
-		return nil, err
-	}
-	if branchID == "" {
-		return nil, fmt.Errorf("branch_id cannot be blank")
-	}
-
+func (a *AssetStore) GetRoomAssignments(ctx context.Context, branchID string) ([]ObjectAsset, error) {
 	var objectAsset []ObjectAsset
 
 	query := "SELECT room_id, asset_id from object_assets WHERE branch_id = $1"
